@@ -3,19 +3,19 @@ import React from "react";
 export function Accordion(props:any) {
     console.log("Accrdion rendering")
     return <div>
-        <AccordionTitle />
+        <AccordionTitle title = {props.titleValue}/>
         <AccordionBody/>
-    </div>
+    </div>;
 }
 
-function AccordionTitle() {
+function AccordionTitle(props: any) {
     return (<div>
-            <h3>Меню</h3>
+            <h3>(props.title)</h3>
         </div>
     );
 }
 
-function AccordionBody(props: any) {
+function AccordionBody() {
     return (
         <div>
             <ul>
