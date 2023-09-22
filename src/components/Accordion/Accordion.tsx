@@ -6,16 +6,16 @@ type AccordionPropsType = {
 function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendering");
 
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [Collapsed, setCollapsed] = useState(false);
 
     const toggleAccordion = () => {
-        setIsCollapsed(!isCollapsed);
+        setCollapsed(!Collapsed);
     };
 
     return (
         <div>
             <AccordionTitle title={props.titleValue} toggleAccordion={toggleAccordion} />
-            {!isCollapsed && <AccordionBody />}
+            {!Collapsed && <AccordionBody />}
         </div>
     );
 }
