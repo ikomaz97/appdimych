@@ -2,21 +2,27 @@ import React from 'react';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import {Rating} from "./components/Rating/Rating";
-
-function App() {
-    console.log("App rendering")
-    return (
+import OnOff from "./components/OnOff/OnOff";
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+function App(props:any) {
+       return (
         <div>
-            <PageTitle title={"This is App component"}/>
-            <PageTitle title={"My frends"}/>
-            <Rating value = {0}/>
-            <Rating value = {1}/>
-            <Rating value = {2}/>
-            <Rating value = {3}/>
-            <Rating value = {4}/>
-            <Rating value = {5}/>
+            <OnOff/>
+            <OnOff/>
+            <OnOff/>
+           {/* <PageTitle title={"This is App component"}/>
+            <PageTitle title={"My frends"}/>*/}
+            {/*<UncontrolledRating value = {0}/>
+            <UncontrolledRating value = {1}/>
+            <UncontrolledRating value = {2}/>
+            <UncontrolledRating value = {3}/>
+            <UncontrolledRating value = {4}/>
+            <UncontrolledRating value = {5}/>
             <Accordion titleValue = "Menu"/>
-            <Accordion titleValue = "Users"/>
+            <Accordion titleValue = "Users"/>*/}
+            <UncontrolledAccordion titleValue = "Menu"/>
+            <UncontrolledAccordion titleValue = "Users"/>
+
                    </div>
 
     );
