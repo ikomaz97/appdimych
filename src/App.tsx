@@ -20,7 +20,7 @@ function App(props:any) {
             <Accordion titleValue = "Menu"/>
             <Accordion titleValue = "Users"/>*/}
             <UncontrolledAccordion titleValue = "Menu"/>
-            <UncontrolledRating value = {0}/>
+            <Rating value = {3}/>
 
                    </div>
 
