@@ -28,7 +28,9 @@ type AccordionTitleProps = {
 function AccordionTitle(props: AccordionTitleProps) {
     return (
         <div>
-            <button onClick={props.toggleAccordion}>{props.title}</button>
+            <h3>
+            <button onClick={props.toggleAccordion}>--{props.title}--</button>
+            </h3>
         </div>
     );
 }
