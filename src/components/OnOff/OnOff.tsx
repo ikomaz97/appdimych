@@ -6,7 +6,7 @@ export type PropsType ={
 
 
 
-const OnOff = (props:PropsType) => {
+export const OnOff = (props:PropsType) => {
 
 
     useState()
