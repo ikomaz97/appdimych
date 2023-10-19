@@ -1,5 +1,3 @@
-// Button.stories.ts|tsx
-
 import type { Meta } from '@storybook/react';
 import { actions } from '@storybook/addon-actions';
 import Accordion from './Accordion';
