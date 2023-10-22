@@ -3,7 +3,7 @@ type AccordionPropsType = {
     titleValue: string;
 };
 
-function UncontrolledAccordion(props: AccordionPropsType) {
+export function UncontrolledAccordion(props: AccordionPropsType) {
     console.log("Accordion rendering");
 
     const [Collapsed, setCollapsed] = useState(false);
@@ -47,4 +47,4 @@ function AccordionBody() {
     );
 }
 
-export default UncontrolledAccordion;
+//export default UncontrolledAccordion;
