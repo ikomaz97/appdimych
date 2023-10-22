@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 export type PropsType ={
   onChange:(on:boolean)=>void
+    defaultOn?: boolean
 }
 
 
 
-const UncontrolledOnOff = (props:PropsType) => {
-    let [on, setOn] = useState(false);
+ export const UncontrolledOnOff = (props:PropsType) => {
+    let [on, setOn] = useState(props.defaultOn ? props.defaultOn : false);
 
     useState()
     const onStyle   = {
@@ -57,4 +58,3 @@ const offClicked = () => {
     );
 };
 
-export default UncontrolledOnOff;
