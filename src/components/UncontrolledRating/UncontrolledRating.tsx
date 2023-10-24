@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 
-export type RatingPropsType = {
-    defaultValue?: number; // Изменил тип defaultValue на number
-    onChange: (value: number) => void; // Изменил тип параметра onChange
+type RatingPropsType = {
+    value: number; // добавляем свойство value
+    onChange: (value: number) => void;
 };
 
 export function UncontrolledRating(props: RatingPropsType) {
-    let [value, setValue] = useState<number>(props.defaultValue || 0);
+    const [value, setValue] = useState<number>(props.value);
+
+    function handleRatingChange(newValue: number) {
+        if (newValue !== value) {
+            setValue(newValue);
+            props.onChange(newValue);
+        }
+    }
+
     return (
         <div>
             <Star selected={value > 0} setValue={() => handleRatingChange(1)} />
@@ -16,13 +24,6 @@ export function UncontrolledRating(props: RatingPropsType) {
             <Star selected={value > 4} setValue={() => handleRatingChange(5)} />
         </div>
     );
-
-    function handleRatingChange(newValue: number) {
-        if (newValue !== value) {
-            setValue(newValue);
-            props.onChange(newValue);
-        }
-    }
 }
 
 type StarPropsType = {
@@ -32,8 +33,6 @@ type StarPropsType = {
 
 function Star(props: StarPropsType) {
     return (
-        <span onClick={() => {
-            props.setValue();
-        }}> {props.selected ? <b>star- </b> : 'star '}</span>
+        <span onClick={props.setValue}>{props.selected ? <b>star- </b> : "star "}</span>
     );
 }
