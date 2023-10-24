@@ -1,7 +1,4 @@
 import React from "react";
-
-
-
 export type AccordionPropsType = {
     titleValue: string;
     onChange:()=>void
@@ -20,7 +17,7 @@ function Accordion(props: AccordionPropsType) {
     );
 }
 
-type AccordionTitleProps = {
+export type AccordionTitleProps = {
     title: string
     onChange:()=>void
 };
